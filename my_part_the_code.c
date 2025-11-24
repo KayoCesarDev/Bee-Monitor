@@ -313,15 +313,15 @@ void RemoverAbelha() {
     scanf(" %c", &confirmacao);
     LimpaBuffer(); // Limpa o buffer.
     
-    if (toupper(confirmacao) == 'S') { // Condição da "confirmação". O 'toupper' para transformar o caratere em maiúsculo.
+    if (toupper(confirmacao) == 'S') { // Condição da "confirmação". O 'toupper' para transformar o caratere em maiúsculo (evita possíveis erros).
         printf(Verde "\nAbelha (ID: %d) removida com sucesso!\n" Sem_Cor, id); 
 
-        // Remover a abelha e reorganizar o vetor
-        for (int i = indice; i < TotalAbelhas - 1; i++) {
-            abelhas[i] = abelhas[i + 1];
-            abelhas[i].id = i + 1; // Atualiza o ID da abelha movida
+        // Remove a abelha e reorganiza o vetor.
+        for (int k = indice; k < TotalAbelhas - 1; k++) { // O laço for passa por todas as abelhas que estavam depois da que foi removida;
+            abelhas[k] = abelhas[k + 1]; // Ele copia cada uma delas para a posição da frente;
+            abelhas[k].id = k + 1; // Como as abelhas mudaram de lugar temos que Corrigir e Atualizar o ID das abelhas movidas.
         }
-        TotalAbelhas--;
+        TotalAbelhas--; // Por fim, Incrementa o TotalAbelhas para oficializar a remoção.
     } else {
         printf(Amarelo "\nRemoção cancelada.\n" Sem_Cor);
     } 
