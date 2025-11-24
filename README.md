@@ -1,2 +1,2 @@
 # Bee-Monitor
-É um programa desenvolvido por mim e por mais 4 alunos da UFPI no curso de Sistemas de Informação. Esse é o primeiro projeto que eu administro e desenvolvo. Quanto a Linguagem, foi utilizado a linguagem C pura.
+É um programa simples em desenvolvimento por mim Kayo César e por mais 4 alunos da UFPI no curso de Sistemas de Informação. Esse é o primeiro projeto que eu administro e desenvolvo em prol da 4° Avaliação de Algoritmos e Programação 1. Quanto a Linguagem, foi utilizado a linguagem C pura.
